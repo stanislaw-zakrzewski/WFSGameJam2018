@@ -795,7 +795,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1719561372}
-        m_MethodName: loadSceneMinigame1
+        m_MethodName: LoadSceneMinigame1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1016,7 +1016,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2094797788}
-        m_MethodName: loadSceneMainMenu
+        m_MethodName: LoadSceneMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

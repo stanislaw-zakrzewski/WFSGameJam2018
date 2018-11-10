@@ -5,20 +5,41 @@ using UnityEngine.SceneManagement;
 
 public class loadSceneScript : MonoBehaviour {
 
-    public void loadSceneMinigame1()
-    {
-        
-        SceneManager.LoadScene("MiniGame1");
-        SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
-        Time.timeScale = 1f;
+    bool isPauseLoaded = false;
 
-    }
-
-    public void loadSceneMainMenu()
+    public void LoadSceneMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
-        SceneManager.UnloadScene("Pause");
+        if (isPauseLoaded)
+        {
+            SceneManager.UnloadScene("Pause");
+            isPauseLoaded = false;
+        }
+
         Time.timeScale = 1f;
     }
 
+    public void LoadSceneMinigame1()
+    {
+
+        SceneManager.LoadScene("MiniGame1");
+        if (isPauseLoaded == false)
+        {
+            SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+            isPauseLoaded = true;
+        }
+        Time.timeScale = 1f;
+
+    }
+
+    public void LoadSceneChapter0()
+    {
+        SceneManager.LoadScene("Chapter0");
+        if (isPauseLoaded == false)
+        {
+            SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+            isPauseLoaded = true;
+        }
+        Time.timeScale = 1f;
+    }
 }
