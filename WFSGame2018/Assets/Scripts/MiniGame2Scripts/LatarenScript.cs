@@ -5,7 +5,7 @@ using UnityEngine;
 public class LatarenScript : MonoBehaviour {
 
     private Vector3 position;
-    private bool isSwiatlo;
+    public bool isSwiatlo;
     public GameObject child;
     private int cnter;
        
@@ -14,26 +14,29 @@ public class LatarenScript : MonoBehaviour {
 	void Start () {
         position = transform.position;
         isSwiatlo = false;
-        cnter = (int)(100 * Random.value);           
+        cnter = (int)(100 * Random.value);
+        Zgas();
         
     }
 	
-    void Zgas() {
+    public void Zgas() {
 
         child.transform.localScale = new Vector3(0, 0, 0);
+        isSwiatlo = false;
     }
 
     public void Zaswiec()
     {
         child.transform.localScale = new Vector3(1, 1, 1);
+        isSwiatlo = true;
     }
 
 
 	// Update is called once per frame
 	void Update () {
-        if (cnter % 54 == 0) Zgas();
-        if (cnter % 72 == 0) Zaswiec();
-        cnter++;
+        //if (cnter % 54 == 0) Zgas();
+        //if (cnter % 72 == 0) Zaswiec();
+        //cnter++;
         
 	}
 }

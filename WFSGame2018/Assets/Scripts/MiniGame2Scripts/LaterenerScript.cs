@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class LaterenerScript : MonoBehaviour {
 
-    public GameObject lat1;
-    public GameObject lat2;
-    public GameObject lat3;
-    public GameObject lat4;
-    public GameObject lat5;
-    public GameObject lat6;
-    private List<GameObject> latarnie;
+    public LatarenScript lat1;
+    public LatarenScript lat2;
+    public LatarenScript lat3;
+    public LatarenScript lat4;
+    public LatarenScript lat5;
+    public LatarenScript lat6;
+    private List<LatarenScript> latarnie;
     private Vector3 nexTarget;
     private bool isDoszedl;
     private const float epsilon = 0.2f;
@@ -22,7 +22,7 @@ public class LaterenerScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        latarnie = new List<GameObject>();  
+        latarnie = new List<LatarenScript>();  
         latarnie.Add(lat1);
         latarnie.Add(lat2);
         latarnie.Add(lat3);
@@ -45,14 +45,24 @@ public class LaterenerScript : MonoBehaviour {
         return num2;
     }
 
+    private int chckOn ()
+    {
+        int number = 0;
+        foreach(LatarenScript l in latarnie)
+        {
+            if (l.isSwiatlo == true) number++;
+        }
+        return number;
+    }
     private void chooseTarget()
     {
         previsLosed = losed;
         losed = rng();
-        while (previsLosed == losed)
+        while (previsLosed == losed || latarnie[losed].isSwiatlo == true)
         {
             previsLosed = losed;
             losed = rng();
+            if (chckOn() == 6) break;
         }
         nexTarget = latarnie[losed].transform.position;
         Debug.Log(losed);
@@ -100,11 +110,13 @@ public class LaterenerScript : MonoBehaviour {
         }
         else
         {
+            latarnie[losed].Zaswiec();
             chooseTarget();
             Debug.Log("Doszedł");
             cntX = nexTarget.x - transform.position.x;
             cntY = Mathf.Abs(nexTarget.y - transform.position.y);
             isDoszedl = false;
+            
         }
 	}
 }
