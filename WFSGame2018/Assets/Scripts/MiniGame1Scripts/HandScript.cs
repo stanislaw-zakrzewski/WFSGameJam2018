@@ -3,23 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HandScript : MonoBehaviour {
-    private Camera camera;
+    private Camera cam;
     private bool isBusy;
     private GameObject actualCharacter;
 	// Use this for initialization
 	void Start () {
-        camera = Camera.main;
+        cam = Camera.main;
+        name = "hand";
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-
-        
-    }
 
     private void LateUpdate()
     {
-        transform.position = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, camera.nearClipPlane));
+        transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
     }
 
     public bool GetIsBusy()

@@ -37,8 +37,7 @@ public class SinkScript : MonoBehaviour {
         {
             if(counter < 1)
             {
-                Debug.Log(counter);
-                counter += 0.01f;// parent.gameObject.GetComponent<CharacterScript>().GetHowFastDies();
+                counter += parent.gameObject.GetComponent<CharacterScript>().GetHowFastDies();
             } else
             {
                 parent.GetComponent<CharacterScript>().Return();
