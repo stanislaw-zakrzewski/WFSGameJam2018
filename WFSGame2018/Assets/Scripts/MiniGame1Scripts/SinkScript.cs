@@ -47,7 +47,5 @@ public class SinkScript : MonoBehaviour {
         {
             counter = 0;
         }
-        mask.transform.position =  new Vector2(mask.transform.position.x, 0 - mask.transform.localScale.y / 2);
-        mask.transform.localScale = new Vector2(1, counter);
     }
 }
