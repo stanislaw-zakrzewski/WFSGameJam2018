@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4537308755232110}
   - component: {fileID: 212388640400265474}
+  - component: {fileID: 114019296399921522}
   m_Layer: 0
   m_Name: MiniGame2-latarnik
   m_TagString: Untagged
@@ -40,6 +41,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114019296399921522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1580104742192578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92dbee8384be1874ba50b4d45e8addd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lat1: {fileID: 0}
+  lat2: {fileID: 0}
+  lat3: {fileID: 0}
+  lat4: {fileID: 0}
+  lat5: {fileID: 0}
+  lat6: {fileID: 0}
 --- !u!212 &212388640400265474
 SpriteRenderer:
   m_ObjectHideFlags: 1
