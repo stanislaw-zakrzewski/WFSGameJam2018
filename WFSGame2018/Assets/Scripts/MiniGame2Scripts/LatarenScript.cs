@@ -31,9 +31,19 @@ public class LatarenScript : MonoBehaviour {
         isSwiatlo = true;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isSwiatlo)
+        {
+            Zgas();
+            Destroy(collision.gameObject);
+        }
+        
 
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update () {
         //if (cnter % 54 == 0) Zgas();
         //if (cnter % 72 == 0) Zaswiec();
         //cnter++;

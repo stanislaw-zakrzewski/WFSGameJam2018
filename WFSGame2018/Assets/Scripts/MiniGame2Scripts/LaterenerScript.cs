@@ -15,8 +15,6 @@ public class LaterenerScript : MonoBehaviour {
     private bool isDoszedl;
     private const float epsilon = 0.2f;
     private float movment = 0.1f;
-    float cntX = 0;
-    float cntY = 0;
     int losed = -1;
     int previsLosed = -1;
 
@@ -31,8 +29,6 @@ public class LaterenerScript : MonoBehaviour {
         latarnie.Add(lat6);
         isDoszedl = false;
         chooseTarget();
-        cntX = (nexTarget.x - transform.position.x);
-        cntY = Mathf.Abs(nexTarget.y - transform.position.y);
     }
 	
 
@@ -65,7 +61,7 @@ public class LaterenerScript : MonoBehaviour {
             if (chckOn() == 6) break;
         }
         nexTarget = latarnie[losed].transform.position;
-        Debug.Log(losed);
+        
         
     }
 
@@ -112,9 +108,6 @@ public class LaterenerScript : MonoBehaviour {
         {
             latarnie[losed].Zaswiec();
             chooseTarget();
-            Debug.Log("Doszedł");
-            cntX = nexTarget.x - transform.position.x;
-            cntY = Mathf.Abs(nexTarget.y - transform.position.y);
             isDoszedl = false;
             
         }
