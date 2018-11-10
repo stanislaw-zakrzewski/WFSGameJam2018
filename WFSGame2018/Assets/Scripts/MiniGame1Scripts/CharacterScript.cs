@@ -124,6 +124,7 @@ public class CharacterScript : MonoBehaviour {
 
     public void Return()
     {
+        PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 1);
         if(handScript.GetActualCharacter() == gameObject)
         {
             handScript.SetIsBusy(false);
