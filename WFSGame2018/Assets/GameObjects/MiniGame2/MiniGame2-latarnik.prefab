@@ -9,55 +9,43 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1188059627257798}
+  m_RootGameObject: {fileID: 1580104742192578}
   m_IsPrefabAsset: 1
---- !u!1 &1188059627257798
+--- !u!1 &1580104742192578
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4032555947929232}
-  - component: {fileID: 212235120392767858}
-  - component: {fileID: 114900426703668756}
+  - component: {fileID: 4537308755232110}
+  - component: {fileID: 212388640400265474}
   m_Layer: 0
-  m_Name: MiniGame2-lataren
+  m_Name: MiniGame2-latarnik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4032555947929232
+--- !u!4 &4537308755232110
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1188059627257798}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.14, y: 1.56, z: 0}
-  m_LocalScale: {x: 0.839, y: 0.839, z: 0.839}
+  m_GameObject: {fileID: 1580104742192578}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.43, y: -1.12, z: 0}
+  m_LocalScale: {x: 0.16745351, y: 0.16745351, z: 0.16745351}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114900426703668756
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1188059627257798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e9345073af03a478cc465cb3ca0882, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!212 &212235120392767858
+--- !u!212 &212388640400265474
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1188059627257798}
+  m_GameObject: {fileID: 1580104742192578}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -86,13 +74,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 57eb9dc5471240c41ad8f2d0f0769354, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2c3c7f5b36b1bb347a864b0eb513b464, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.69, y: 2.66}
+  m_Size: {x: 8, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
