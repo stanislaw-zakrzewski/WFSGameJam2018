@@ -11,12 +11,6 @@ public class HandScript : MonoBehaviour {
         cam = Camera.main;
         name = "hand";
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-
-        
-    }
 
     private void LateUpdate()
     {

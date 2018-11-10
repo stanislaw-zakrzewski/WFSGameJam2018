@@ -40,7 +40,7 @@ public class CharacterGeneratorScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 
         if(Random.value < 0.05 && characters.Count < maxCharacterCount)
         {
