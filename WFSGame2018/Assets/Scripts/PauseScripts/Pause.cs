@@ -14,28 +14,29 @@ public class Pause : MonoBehaviour {
         gameIsPaused = false;
     }
 
-	void Update () {
+	public void Update () {
         if (Input.GetKeyDown(KeyCode.Escape)){
             if (gameIsPaused)
             {
-                resumeGame();
+                ResumeGame();
             }
             else
             {
-                pauseGame();
+                PauseGame();
             }
         }
 
 	}
 
-    void resumeGame()
+    public void ResumeGame()
     {
+        Debug.Log("RezumeGame");
         pauseUi.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
     }
 
-    void pauseGame()
+    void PauseGame()
     {
         pauseUi.SetActive(true);
         Time.timeScale = 0f;
