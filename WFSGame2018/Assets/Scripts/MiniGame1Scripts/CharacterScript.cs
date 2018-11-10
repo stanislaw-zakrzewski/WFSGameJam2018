@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterScript : MonoBehaviour {
+    private float howFastDies = 0.01f;
     private GameObject gameObjctToStick;
     private bool isOnTarget;
     private bool mouseIsPressed;
@@ -13,6 +14,7 @@ public class CharacterScript : MonoBehaviour {
 	void Start () {
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.freezeRotation = true;
+        howFastDies = 0.01f;
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -71,5 +73,15 @@ public class CharacterScript : MonoBehaviour {
                 }
             }
         }
+    }
+
+    public float GetHowFastDies()
+    {
+        return howFastDies;
+    }
+
+    public void Return()
+    {
+        Destroy(this);
     }
 }
