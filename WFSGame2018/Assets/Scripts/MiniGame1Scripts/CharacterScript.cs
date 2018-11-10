@@ -12,15 +12,22 @@ public class CharacterScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb2d = GetComponent<Rigidbody2D>();
+        rb2d.freezeRotation = true;
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<HandScript>())
         {
-            isOnTarget = true;
-            gameObjctToStick = collision.gameObject;
-            rb2dParent = gameObjctToStick.GetComponent<Rigidbody2D>();
+            if (!collision.gameObject.GetComponent<HandScript>().GetIsBusy())
+            {
+
+                collision.gameObject.GetComponent<HandScript>().SetActualCharacter(this.gameObject);
+                collision.gameObject.GetComponent<HandScript>().SetIsBusy(true);
+                isOnTarget = true;
+                gameObjctToStick = collision.gameObject;
+                rb2dParent = gameObjctToStick.GetComponent<Rigidbody2D>();
+            }
         }
     }
 
@@ -30,7 +37,11 @@ public class CharacterScript : MonoBehaviour {
         {
             if (!mouseIsPressed)
             {
-                isOnTarget = false;
+                if (collision.gameObject.GetComponent<HandScript>().GetIsBusy() && collision.gameObject.GetComponent<HandScript>().GetActualCharacter().Equals(gameObject))
+                {
+                    collision.gameObject.GetComponent<HandScript>().SetIsBusy(false);
+                    isOnTarget = false;
+                }
             }
         }
     }

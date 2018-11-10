@@ -47,5 +47,12 @@ public class SinkScript : MonoBehaviour {
         {
             counter = 0;
         }
+        mask.transform.localScale = new Vector2(3, counter);
+        
+    }
+
+    private void LateUpdate()
+    {
+        mask.transform.position = new Vector2(transform.position.x, transform.position.y - (GetComponent<PolygonCollider2D>().bounds.size.y * (1-counter) / 2));
     }
 }
