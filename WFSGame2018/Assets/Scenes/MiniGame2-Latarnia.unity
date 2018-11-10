@@ -378,11 +378,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4190087196875004, guid: 240b3a0c429655b40b6872a52fd3fcc5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.4077072
+      value: -0.48
       objectReference: {fileID: 0}
     - target: {fileID: 4190087196875004, guid: 240b3a0c429655b40b6872a52fd3fcc5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.42760754
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 4190087196875004, guid: 240b3a0c429655b40b6872a52fd3fcc5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -693,6 +693,54 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1600322748936182, guid: 240b3a0c429655b40b6872a52fd3fcc5,
     type: 2}
   m_PrefabInternal: {fileID: 268980007}
+--- !u!60 &1305051234
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1305051231}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.69, y: 2.66}
+    newSize: {x: 0.69, y: 2.66}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.235, y: 0.07}
+      - {x: 0.225, y: 0.48}
+      - {x: 0.325, y: 0.52}
+      - {x: 0.325, y: 0.55}
+      - {x: 0.205, y: 0.78999996}
+      - {x: 0.24499999, y: 0.87}
+      - {x: 0.185, y: 1.0699999}
+      - {x: 0.055, y: 1.28}
+      - {x: 0.005, y: 1.28}
+      - {x: -0.024999999, y: 1.26}
+      - {x: -0.16499999, y: 1.1}
+      - {x: -0.225, y: 0.87}
+      - {x: -0.275, y: 0.68}
+      - {x: -0.255, y: 0.41}
+      - {x: -0.235, y: 0.049999997}
+      - {x: -0.305, y: -0.61}
+      - {x: -0.315, y: -0.97999996}
+      - {x: -0.315, y: -1.17}
+      - {x: -0.195, y: -1.3199999}
+      - {x: -0.16499999, y: -1.3299999}
+      - {x: 0.235, y: -1.3299999}
+      - {x: 0.315, y: -1.2099999}
+      - {x: 0.295, y: -0.83}
+      - {x: 0.24499999, y: -0.24}
 --- !u!1 &1410536420 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1600322748936182, guid: 240b3a0c429655b40b6872a52fd3fcc5,
@@ -822,11 +870,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4537308755232110, guid: d6abcadc3077db54b9b71d07388f1699, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.43
+      value: 1.95
       objectReference: {fileID: 0}
     - target: {fileID: 4537308755232110, guid: d6abcadc3077db54b9b71d07388f1699, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.12
+      value: -2.56
       objectReference: {fileID: 0}
     - target: {fileID: 4537308755232110, guid: d6abcadc3077db54b9b71d07388f1699, type: 2}
       propertyPath: m_LocalPosition.z

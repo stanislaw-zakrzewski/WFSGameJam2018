@@ -23,7 +23,7 @@ public class LatarenScript : MonoBehaviour {
         child.transform.localScale = new Vector3(0, 0, 0);
     }
 
-    void Zaswiec()
+    public void Zaswiec()
     {
         child.transform.localScale = new Vector3(1, 1, 1);
     }
@@ -34,6 +34,6 @@ public class LatarenScript : MonoBehaviour {
         if (cnter % 54 == 0) Zgas();
         if (cnter % 72 == 0) Zaswiec();
         cnter++;
-        Debug.Log(cnter);
+        
 	}
 }
