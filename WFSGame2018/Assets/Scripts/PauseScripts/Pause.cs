@@ -38,8 +38,9 @@ public class Pause : MonoBehaviour {
 
     void PauseGame()
     {
-        pauseUi.SetActive(true);
+        Debug.Log("PauseGame");
         Time.timeScale = 0f;
+        pauseUi.SetActive(true);
         gameIsPaused = true;
     }
 }
