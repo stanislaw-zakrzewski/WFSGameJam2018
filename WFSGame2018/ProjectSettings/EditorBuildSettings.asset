@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Splash.unity
+    guid: 68994587d3d123247aa2a774da5ae885
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -16,5 +19,41 @@ EditorBuildSettings:
     guid: 0865a4401421ddf4099e64d9c3f4b932
   - enabled: 1
     path: Assets/Scenes/Chapter0.unity
-    guid: 51ef5b97b42fd0441bbe8386e655ac89
+    guid: dbe46c8f01f0d33489445a33d8dd19ac
+  - enabled: 1
+    path: Assets/Scenes/FilmHolder.unity
+    guid: 46d35d5645753c0409b054ec45e95812
+  - enabled: 1
+    path: Assets/Scenes/GameHolder.unity
+    guid: 2ba09adc17acce5468e74213088b0334
+  - enabled: 1
+    path: Assets/Scenes/GameWorld.unity
+    guid: e64f39f0fd2163f469031bbbcfdf0692
+  - enabled: 1
+    path: Assets/Scenes/MiniGame2.unity
+    guid: b306fc0a9b0e36040bbba2bf7efd357b
+  - enabled: 1
+    path: Assets/Scenes/MiniGame3.unity
+    guid: bd4e85fc18e82194ba97fc20793ab667
+  - enabled: 1
+    path: Assets/Scenes/MiniGame4.unity
+    guid: 63e6eea4440b02040908e8e3b7394beb
+  - enabled: 1
+    path: Assets/Scenes/Videos/Vid1.unity
+    guid: 600c4ce3b42cf404395f3ec9c9ff7504
+  - enabled: 1
+    path: Assets/Scenes/Videos/Vid2.unity
+    guid: 7adcbce2ad9729f45b8c06b2c16aed15
+  - enabled: 1
+    path: Assets/Scenes/Videos/Vid3.unity
+    guid: 49ce90146834f9f42b898b9e32a8c800
+  - enabled: 1
+    path: Assets/Scenes/Videos/Vid4.unity
+    guid: f24dfdabe5120704fbeb6e2093fee5ba
+  - enabled: 1
+    path: Assets/Scenes/Videos/Vid5.unity
+    guid: ab94c24fabc635d4c8071a6e2fabd9eb
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: f4d6dc1b47292294d976f6972d6fadb3
   m_configObjects: {}

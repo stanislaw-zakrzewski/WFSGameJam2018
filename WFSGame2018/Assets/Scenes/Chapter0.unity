@@ -122,7 +122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 479293648}
   - component: {fileID: 479293647}
-  - component: {fileID: 479293650}
   - component: {fileID: 479293649}
   m_Layer: 0
   m_Name: Video Player
@@ -138,7 +137,7 @@ VideoPlayer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 479293646}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: de7c5d5872f28af49abc9ab11b64a1ce, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: d2454a78c94b32c4f91af8dbe29c8b7f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -185,18 +184,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 479293646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b83b983eceecb72478954b59ecdcdc23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &479293650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 479293646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6639b77db28cf6f4ba17a5f9823dd41d, type: 3}
+  m_Script: {fileID: 11500000, guid: 95136c4feba543f408361f253fef183a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &818919799
@@ -343,15 +331,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 91d81696634e7644eb47958a195c9969, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9e2549c429b633345981732e81417760, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.04, y: 0.04}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &841047410
@@ -361,8 +349,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 841047408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.017, y: 0.084, z: 0}
-  m_LocalScale: {x: 18.280106, y: 10.217707, z: 1}
+  m_LocalPosition: {x: 0.001, y: -0.035, z: 0}
+  m_LocalScale: {x: 451.49194, y: 252.43275, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4

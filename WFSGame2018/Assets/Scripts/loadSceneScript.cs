@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class loadSceneScript : MonoBehaviour {
 
     bool isPauseLoaded = false;
+    HideUI hideUI;
 
     public void LoadSceneMainMenu()
     {
@@ -27,6 +28,49 @@ public class loadSceneScript : MonoBehaviour {
         {
             SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
             isPauseLoaded = true;
+            
+        }
+        SceneManager.LoadScene("GameWorld", LoadSceneMode.Additive);
+        Time.timeScale = 1f;
+
+    }
+
+    public void LoadSceneMinigame2()
+    {
+
+        SceneManager.LoadScene("MiniGame2");
+        if (isPauseLoaded == false)
+        {
+            SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+            isPauseLoaded = true;
+        }
+        Time.timeScale = 1f;
+
+    }
+
+    public void LoadSceneMinigame3()
+    {
+
+        SceneManager.LoadScene("MiniGame3");
+        if (isPauseLoaded == false)
+        {
+            SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+            isPauseLoaded = true;
+
+        }
+        Time.timeScale = 1f;
+
+    }
+
+    public void LoadSceneMinigame4()
+    {
+
+        SceneManager.LoadScene("MiniGame4");
+        if (isPauseLoaded == false)
+        {
+            SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+            isPauseLoaded = true;
+
         }
         Time.timeScale = 1f;
 
@@ -35,6 +79,7 @@ public class loadSceneScript : MonoBehaviour {
     public void LoadSceneChapter0()
     {
         SceneManager.LoadScene("Chapter0");
+        SceneManager.UnloadScene("GameWorld");
         if (isPauseLoaded == false)
         {
             SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
@@ -42,4 +87,71 @@ public class loadSceneScript : MonoBehaviour {
         }
         Time.timeScale = 1f;
     }
+
+    public void LoadSceneChapter1()
+    {
+        
+        SceneManager.LoadScene("Vid1");
+        if (isPauseLoaded == false)
+        {
+            SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+            isPauseLoaded = true;
+        }
+        Time.timeScale = 1f;
+    }
+
+    public void LoadSceneChapter2()
+    {
+        SceneManager.LoadScene("Vid2");
+        if (isPauseLoaded == false)
+        {
+            SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+            isPauseLoaded = true;
+        }
+        Time.timeScale = 1f;
+    }
+
+    public void LoadSceneChapter3()
+    {
+        SceneManager.LoadScene("Vid3");
+        if (isPauseLoaded == false)
+        {
+            SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+            isPauseLoaded = true;
+        }
+        Time.timeScale = 1f;
+    }
+
+    public void LoadSceneChapter4()
+    {
+        SceneManager.LoadScene("Vid4");
+        if (isPauseLoaded == false)
+        {
+            SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+            isPauseLoaded = true;
+        }
+        Time.timeScale = 1f;
+    }
+
+    public void LoadSceneChapter5()
+    {
+        SceneManager.LoadScene("Vid5");
+        if (isPauseLoaded == false)
+        {
+            SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+            isPauseLoaded = true;
+        }
+        Time.timeScale = 1f;
+    }
+
+    void HideGameWorld(bool isHided)
+    {
+        hideUI.HideGameWorld(isHided);
+    }
+
+    private void Start()
+    {
+        hideUI = new HideUI();
+    }
+
 }
