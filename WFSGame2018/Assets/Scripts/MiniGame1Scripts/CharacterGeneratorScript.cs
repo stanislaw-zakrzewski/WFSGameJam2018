@@ -18,6 +18,8 @@ public class CharacterGeneratorScript : MonoBehaviour {
     private List<Vector2> positions;
     private List<GameObject> characters;
     private int score;
+    private float speedUp;
+    private float spawningRate;
 
 	// Use this for initialization
 	void Start () {
@@ -37,16 +39,27 @@ public class CharacterGeneratorScript : MonoBehaviour {
             character1
         };
         score = 0;
+        speedUp = 1;
+        spawningRate = 0.001f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-        if(Random.value < 0.05 && characters.Count < maxCharacterCount)
+        speedUp -= Time.deltaTime;
+        if(speedUp < 0)
+        {
+            speedUp = 1;
+            spawningRate += 0.001f;
+        }
+        if(Random.value < spawningRate)
         {
             GameObject pom2 = Instantiate(characters[(int)(Random.value * characters.Count - 0.01)]);
             pom2.GetComponent<CharacterScript>().Initialise(positions[(int)(Random.value * positions.Count - 0.01)], this);
             characters.Add(pom2);
+        }
+        if(characters.Count > 20)
+        {
+            //loose
         }
 	}
 

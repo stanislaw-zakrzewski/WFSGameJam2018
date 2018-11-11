@@ -72,34 +72,7 @@ public class CharacterScript : MonoBehaviour {
         }
         if(!isMoved)
         {
-            if (transform.position.x != startingPosition.x || transform.position.y != startingPosition.y)
-            {
-                Vector3 pom = new Vector3(startingPosition.x - transform.position.x, startingPosition.y - transform.position.y);
-                if(Mathf.Abs(pom.x) > Mathf.Abs(pom.y))
-                {
-                    if(Mathf.Abs(pom.x) < 0.1)
-                    {
-                        transform.position = startingPosition;
-                    } else
-                    {
-                        pom.x /= Mathf.Abs(pom.x);
-                        pom.y /= Mathf.Abs(pom.x);
-                        transform.position = transform.position + pom * speed * Random.value;
-                    }
-                } else
-                {
-                    if (Mathf.Abs(pom.y) < 0.1)
-                    {
-                        transform.position = startingPosition;
-                    }
-                    else
-                    {
-                        pom.x /= Mathf.Abs(pom.y);
-                        pom.y /= Mathf.Abs(pom.y);
-                        transform.position = transform.position + pom * speed * Random.value;
-                    }
-                }           
-            }
+            transform.position = Vector2.MoveTowards(transform.position, startingPosition, speed);
         }
 	}
 

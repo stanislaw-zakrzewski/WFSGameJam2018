@@ -20,6 +20,6 @@ public class CameraScript : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        //loose
     }
 }
