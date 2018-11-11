@@ -21,13 +21,13 @@ public class Next3 : MonoBehaviour
 
     void EndReached(VideoPlayer vp)
     {
-        loadSceneScript.LoadSceneMinigame1();
+        loadSceneScript.LoadSceneMinigame3();
     }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            loadSceneScript.LoadSceneMinigame1();
+            loadSceneScript.LoadSceneMinigame3();
         }
     }
 

@@ -26,16 +26,19 @@ public class PlayerScript : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (invincibility <= 0) {
-            lives--;
-            invincibility = 2;
-            if (lives < 0)
-            {
-                //loose
-            }
-        } else
+        if (collision.gameObject.GetComponent<Pebel>())
         {
-            invincibility -= Time.deltaTime;
+            if (invincibility <= 0) {
+                lives--;
+                invincibility = 2;
+                if (lives < 0)
+                {
+                    PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 10);
+                }
+            } else
+            {
+                invincibility -= Time.deltaTime;
+            }
         }
     }
 }

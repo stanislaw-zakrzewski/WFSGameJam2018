@@ -33,12 +33,13 @@ catchTimer = 0;
 			isCatched = 0;
 		}
 
-		if (transform.position.y > -2f)
+		if (transform.position.y > -10f)
 			GetComponent<Rigidbody2D>().AddForce(force);
 		else {
-			//Scene.Unload();
-			//Scene.Load();
-		}
+            //Scene.Unload();
+            //Scene.Load();
+            PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 10);
+        }
 		catchTimer += Time.deltaTime;
 		if (isCatched != 0) {
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, (renka.transform.position.y-2f - transform.position.y)*70));

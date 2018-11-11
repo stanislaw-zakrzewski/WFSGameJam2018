@@ -13,7 +13,7 @@ public class BGBehavior : MonoBehaviour {
     void Start () {
         canICreateNewBoard = true;
         stosik = new Stack<GameObject>();
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 5; i++)
         {
             Vector2 pom = new Vector2(Random.Range(-40,40),Random.Range((float)-2.5,(float) 0.5));
             Vector2 pom2 = new Vector2(transform.position.x, transform.position.y);

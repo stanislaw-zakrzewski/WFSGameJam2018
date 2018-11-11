@@ -35,28 +35,25 @@ public class ScoreScript : MonoBehaviour {
         if(globalScore == game1EndScore && PlayerPrefs.GetInt("block1") == 0)
         {
             PlayerPrefs.SetInt("block1", 1);
-            loadSceneScript.LoadSceneChapter1();
+            loadSceneScript.LoadSceneChapter2();
         }
         else if(globalScore == (game1EndScore + game2EndScore) && PlayerPrefs.GetInt("block2") == 0)
         {
             PlayerPrefs.SetInt("block2", 1);
-            loadSceneScript.LoadSceneChapter2();
+            loadSceneScript.LoadSceneChapter3();
         }
         else if (globalScore == (game1EndScore + game2EndScore + game3EndScore) && PlayerPrefs.GetInt("block3") == 0)
         {
             PlayerPrefs.SetInt("block3", 1);
-            loadSceneScript.LoadSceneChapter3();
+            loadSceneScript.LoadSceneChapter4();
         }
         else if (globalScore == (game1EndScore + game2EndScore + game3EndScore + game4EndScore) && PlayerPrefs.GetInt("block4") == 0)
         {
             PlayerPrefs.SetInt("block4", 1);
 
-            loadSceneScript.LoadSceneChapter4();
-        }
-        else if(globalScore == 50)
-        {
             loadSceneScript.LoadSceneChapter5();
         }
+       
 
     }
 }

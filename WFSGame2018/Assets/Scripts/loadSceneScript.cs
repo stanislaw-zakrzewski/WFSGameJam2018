@@ -10,10 +10,11 @@ public class loadSceneScript : MonoBehaviour {
 
     public void LoadSceneMainMenu()
     {
+        
         SceneManager.LoadScene("MainMenu");
         if (isPauseLoaded)
         {
-            SceneManager.UnloadScene("Pause");
+            SceneManager.UnloadSceneAsync("Pause");
             isPauseLoaded = false;
         }
 
@@ -44,13 +45,14 @@ public class loadSceneScript : MonoBehaviour {
             SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
             isPauseLoaded = true;
         }
+        SceneManager.LoadScene("GameWorld", LoadSceneMode.Additive);
         Time.timeScale = 1f;
 
     }
 
     public void LoadSceneMinigame3()
     {
-
+        
         SceneManager.LoadScene("MiniGame3");
         if (isPauseLoaded == false)
         {
@@ -58,6 +60,7 @@ public class loadSceneScript : MonoBehaviour {
             isPauseLoaded = true;
 
         }
+        SceneManager.LoadScene("GameWorld", LoadSceneMode.Additive);
         Time.timeScale = 1f;
 
     }
@@ -72,6 +75,7 @@ public class loadSceneScript : MonoBehaviour {
             isPauseLoaded = true;
 
         }
+        SceneManager.LoadScene("GameWorld", LoadSceneMode.Additive);
         Time.timeScale = 1f;
 
     }
@@ -79,7 +83,7 @@ public class loadSceneScript : MonoBehaviour {
     public void LoadSceneChapter0()
     {
         SceneManager.LoadScene("Chapter0");
-        SceneManager.UnloadScene("GameWorld");
+        SceneManager.UnloadSceneAsync("GameWorld");
         if (isPauseLoaded == false)
         {
             SceneManager.LoadScene("Pause", LoadSceneMode.Additive);

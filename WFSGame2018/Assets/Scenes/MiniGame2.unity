@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 334991036}
   - component: {fileID: 334991039}
   - component: {fileID: 334991040}
+  - component: {fileID: 334991041}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -225,6 +226,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1540527623}
   gamespeed: 5
+--- !u!68 &334991041
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 334991035}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 10.40811, y: -6.790593}
+  - {x: -10.531531, y: -6.726773}
+  - {x: -10.483124, y: 6.591909}
+  - {x: 10.449129, y: 6.45647}
+  - {x: 10.442437, y: -6.784913}
 --- !u!1001 &663367156
 Prefab:
   m_ObjectHideFlags: 0

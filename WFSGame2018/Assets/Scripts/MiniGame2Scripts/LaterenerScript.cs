@@ -73,7 +73,7 @@ public class LaterenerScript : MonoBehaviour {
     void Update() {
         if(chckOn() == 6)
         {
-            //loose
+            PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 10);
         }
         if (isDoszedl == false)
         {
