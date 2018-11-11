@@ -70,11 +70,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1307484643242682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77c744f90f58e2c4496ba5aa2b541878, type: 3}
+  m_Script: {fileID: 11500000, guid: 7165a8d30e9114747a6ed49307b5c193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1941986818387258, guid: 60de85e20aae88f48bc030cfa9b411d1, type: 2}
-  projectile: {fileID: 1764558711144520, guid: b876d62e08f8c5940a0e3fb09ab17337, type: 2}
+  player: {fileID: 1941986818387258, guid: e9c8fea73fadc85438814a5a961b12c2, type: 2}
+  projectile: {fileID: 1764558711144520, guid: f509fbdf6b64b7d418b4796c0567b71b, type: 2}
   power: 2.5
 --- !u!212 &212257943002149448
 SpriteRenderer:
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 06aba94cf4680124bbcfc4060836c053, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e7d82685edce554dbce0c37005c5f5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

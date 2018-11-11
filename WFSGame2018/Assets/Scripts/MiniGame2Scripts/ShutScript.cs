@@ -12,13 +12,11 @@ public class ShutScript : MonoBehaviour {
 	void Start () {
         cnter = 0;
         cam = Camera.main;
-        rb2d = GetComponent<Rigidbody2D>();
 	}
 
     public float speed = 1.5f;
     private Vector3 target;
     private GameObject tmp;
-    private Rigidbody2D rb2d;
 
 	// Update is called once per frame
 	void Update () {
