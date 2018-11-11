@@ -12,6 +12,7 @@ public class lichwiarka : MonoBehaviour {
 	private int canCatch;
 	Vector2 force;
     private loadSceneScript loadSceneScript;
+    private float wynik;
 
     private int isCatched;
 	private float catchTimer;
@@ -21,6 +22,7 @@ public class lichwiarka : MonoBehaviour {
         isCatched = 0;
         catchTimer = 0;
         loadSceneScript = new loadSceneScript();
+        wynik = 2;
     }
 	
 	// Update is called once per frame
@@ -48,7 +50,13 @@ public class lichwiarka : MonoBehaviour {
 				isCatched = 0;	
 			}
 		}
-	}
+        wynik -= Time.deltaTime;
+        if (wynik < 0)
+        {
+            PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 1);
+            wynik = 2;
+        }
+    }
 	
 	public void catchMe() {
 		if (canCatch != 0 && isCatched == 0 && catchTimer > catchCoolDown) {

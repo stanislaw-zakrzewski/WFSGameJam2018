@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour {
     public float gamespeed;
     public int lives;
     public float invincibility;
+    private float wynik;
     // Use this for initialization
     Rigidbody2D body;
     loadSceneScript loadSceneScript;
@@ -16,6 +17,7 @@ public class PlayerScript : MonoBehaviour {
         lives = 5;
         invincibility = 0;
         loadSceneScript = new loadSceneScript();
+        wynik = 2;
     }
 	
 	// Update is called once per frame
@@ -24,6 +26,12 @@ public class PlayerScript : MonoBehaviour {
         float moveY = Input.GetAxis("Vertical");
 
             body.velocity = new Vector2(moveX * maxSpeed, moveY * maxSpeed);
+        wynik -= Time.deltaTime;
+        if(wynik < 0)
+        {
+            PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 1);
+            wynik = 2;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

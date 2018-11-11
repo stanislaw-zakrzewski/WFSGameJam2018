@@ -37,6 +37,7 @@ public class LatarenScript : MonoBehaviour {
         {
             Zgas();
             Destroy(collision.gameObject);
+            PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 1);
         }
         
 
