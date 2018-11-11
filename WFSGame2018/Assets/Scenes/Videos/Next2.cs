@@ -21,14 +21,14 @@ public class Next2 : MonoBehaviour
 
     void EndReached(VideoPlayer vp)
     {
-        loadSceneScript.LoadSceneMinigame2();
+        loadSceneScript.LoadSplash2();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            loadSceneScript.LoadSceneMinigame2();
+            loadSceneScript.LoadSplash2();
         }
     }
 }

@@ -20,7 +20,7 @@ public class CharacterGeneratorScript : MonoBehaviour {
     private int score;
     private float speedUp;
     private float spawningRate;
-
+    loadSceneScript loadSceneScript;
 	// Use this for initialization
 	void Start () {
         positions = new List<Vector2>
@@ -41,7 +41,9 @@ public class CharacterGeneratorScript : MonoBehaviour {
         score = 0;
         speedUp = 1;
         spawningRate = 0.001f;
-	}
+        loadSceneScript = new loadSceneScript();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -59,7 +61,7 @@ public class CharacterGeneratorScript : MonoBehaviour {
         }
         if(characters.Count > 20)
         {
-            //loose
+            loadSceneScript.LoadSceneChapter2();
         }
 	}
 

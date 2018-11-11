@@ -148,6 +148,26 @@ public class loadSceneScript : MonoBehaviour {
         Time.timeScale = 1f;
     }
 
+    public void LoadSplash1()
+    {
+        SceneManager.LoadScene("Instrukcja1");
+    }
+
+    public void LoadSplash2()
+    {
+        SceneManager.LoadScene("Instrukcja2");
+    }
+
+    public void LoadSplash3()
+    {
+        SceneManager.LoadScene("Instrukcja3");
+    }
+
+    public void LoadSplash4()
+    {
+        SceneManager.LoadScene("Instrukcja4");
+    }
+
     void HideGameWorld(bool isHided)
     {
         hideUI.HideGameWorld(isHided);

@@ -10,10 +10,12 @@ public class PlayerScript : MonoBehaviour {
     public float invincibility;
     // Use this for initialization
     Rigidbody2D body;
-	void Start () {
+    loadSceneScript loadSceneScript;
+    void Start () {
         body = this.GetComponent<Rigidbody2D>();
         lives = 5;
         invincibility = 0;
+        loadSceneScript = new loadSceneScript();
     }
 	
 	// Update is called once per frame
@@ -33,7 +35,7 @@ public class PlayerScript : MonoBehaviour {
                 invincibility = 2;
                 if (lives < 0)
                 {
-                    PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 10);
+                    loadSceneScript.LoadSceneChapter3();
                 }
             } else
             {

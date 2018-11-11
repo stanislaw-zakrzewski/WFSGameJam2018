@@ -56,4 +56,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: f4d6dc1b47292294d976f6972d6fadb3
+  - enabled: 1
+    path: Assets/Scenes/SplashScreens/Instrukcja1.unity
+    guid: ce053089533a7864eb2270e07dd42d1d
+  - enabled: 1
+    path: Assets/Scenes/SplashScreens/Instrukcja2.unity
+    guid: a4b6600fc6f4d61418e0478e91623943
+  - enabled: 1
+    path: Assets/Scenes/SplashScreens/Instrukcja3.unity
+    guid: 5ce0c2c6fae4ac542973f382e9beb0eb
+  - enabled: 1
+    path: Assets/Scenes/SplashScreens/Instrukcja4.unity
+    guid: 1f24efdc6d68fc745b5e458d05ddb138
   m_configObjects: {}
