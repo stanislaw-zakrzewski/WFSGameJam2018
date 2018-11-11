@@ -32,7 +32,7 @@ public class ScoreScript : MonoBehaviour {
         Debug.Log(globalScore + "  " + PlayerPrefs.GetInt("score"));
         score.text = globalScore.ToString();
 
-        if(globalScore == game1EndScore && PlayerPrefs.GetInt("block1") == 0)
+        /*if(globalScore == game1EndScore && PlayerPrefs.GetInt("block1") == 0)
         {
             PlayerPrefs.SetInt("block1", 1);
             loadSceneScript.LoadSceneChapter2();
@@ -52,7 +52,7 @@ public class ScoreScript : MonoBehaviour {
             PlayerPrefs.SetInt("block4", 1);
 
             loadSceneScript.LoadSceneChapter5();
-        }
+        }*/
        
 
     }

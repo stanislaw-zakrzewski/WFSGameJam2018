@@ -7,11 +7,12 @@ public class CameraScript : MonoBehaviour {
     Vector3 offset;
     //public float gamespeed;
     Vector3 pom;
-
-	// Use this for initialization
-	void Start () {
+    private loadSceneScript loadSceneScript;
+    // Use this for initialization
+    void Start () {
         //offset = transform.position - player.transform.position;
-	}
+        loadSceneScript = new loadSceneScript();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,7 +22,7 @@ public class CameraScript : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<PlayerScript>()) {
-        PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 10);
+            loadSceneScript.LoadSceneChapter3();
         }
     }
 }

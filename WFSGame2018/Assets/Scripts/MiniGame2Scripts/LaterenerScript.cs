@@ -17,6 +17,7 @@ public class LaterenerScript : MonoBehaviour {
     private float movment = 0.15f;
     int losed = -1;
     int previsLosed = -1;
+    private loadSceneScript loadSceneScript;
 
     // Use this for initialization
     void Start () {
@@ -31,6 +32,7 @@ public class LaterenerScript : MonoBehaviour {
         };
         isDoszedl = false;
         chooseTarget();
+        loadSceneScript = new loadSceneScript();
     }
 	
 
@@ -73,7 +75,7 @@ public class LaterenerScript : MonoBehaviour {
     void Update() {
         if(chckOn() == 6)
         {
-            PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 10);
+            loadSceneScript.LoadSceneChapter4();
         }
         if (isDoszedl == false)
         {

@@ -11,16 +11,17 @@ public class lichwiarka : MonoBehaviour {
 	public float catchCoolDown;
 	private int canCatch;
 	Vector2 force;
+    private loadSceneScript loadSceneScript;
 
-	
-	private int isCatched;
+    private int isCatched;
 	private float catchTimer;
 	void Start () {
-canCatch = 0;
+        canCatch = 0;
 		force = new Vector2(speed, 0);
-isCatched = 0;
-catchTimer = 0;
-	}
+        isCatched = 0;
+        catchTimer = 0;
+        loadSceneScript = new loadSceneScript();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -38,7 +39,7 @@ catchTimer = 0;
 		else {
             //Scene.Unload();
             //Scene.Load();
-            PlayerPrefs.SetInt("score", PlayerPrefs.GetInt("score") + 10);
+            loadSceneScript.LoadSceneChapter5();
         }
 		catchTimer += Time.deltaTime;
 		if (isCatched != 0) {
