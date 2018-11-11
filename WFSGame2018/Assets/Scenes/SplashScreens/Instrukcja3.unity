@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1396647060}
   - component: {fileID: 1396647059}
+  - component: {fileID: 1396647061}
   m_Layer: 0
   m_Name: SterowanieLatarnik
   m_TagString: Untagged
@@ -172,7 +173,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1396647060
@@ -188,6 +189,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1396647061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1396647058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb747f4d2337cda4fae25f3c243a3580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1705541056
 GameObject:
   m_ObjectHideFlags: 0
