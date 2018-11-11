@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4304112809339246}
   - component: {fileID: 212054588174988390}
   - component: {fileID: 50167919213382544}
+  - component: {fileID: 114972884325732788}
   m_Layer: 0
   m_Name: MiniGame2-tlo
   m_TagString: Untagged
@@ -61,6 +62,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &114972884325732788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051215096381392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8c8f428d751dc4e9dfed433c27afa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  v2: {x: 0, y: 0}
+  dupa: {fileID: 1463225132106914, guid: fe26687e4c481854f9a9df4b4bf074c2, type: 2}
+  speed: 1.5
 --- !u!212 &212054588174988390
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -96,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cff1f62f156b8454c93ba31fd74b1327, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 609c32ffc6ad0b041a5f735d3b4282a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
