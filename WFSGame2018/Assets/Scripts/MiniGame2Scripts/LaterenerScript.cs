@@ -14,19 +14,21 @@ public class LaterenerScript : MonoBehaviour {
     private Vector3 nexTarget;
     private bool isDoszedl;
     private const float epsilon = 0.2f;
-    private float movment = 0.1f;
+    private float movment = 0.15f;
     int losed = -1;
     int previsLosed = -1;
 
     // Use this for initialization
     void Start () {
-        latarnie = new List<LatarenScript>();  
-        latarnie.Add(lat1);
-        latarnie.Add(lat2);
-        latarnie.Add(lat3);
-        latarnie.Add(lat4);
-        latarnie.Add(lat5);
-        latarnie.Add(lat6);
+        latarnie = new List<LatarenScript>
+        {
+            lat1,
+            lat2,
+            lat3,
+            lat4,
+            lat5,
+            lat6
+        };
         isDoszedl = false;
         chooseTarget();
     }
@@ -69,11 +71,16 @@ public class LaterenerScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if(chckOn() == 6)
+        {
+            //loose
+        }
         if (isDoszedl == false)
         {
             if (transform.position.x != nexTarget.x || transform.position.y != nexTarget.y)
             {
-                Vector3 pom = new Vector3(nexTarget.x - transform.position.x, nexTarget.y - transform.position.y);
+                transform.position = Vector2.MoveTowards(transform.position, nexTarget, movment);
+                /*Vector3 pom = new Vector3(nexTarget.x - transform.position.x, nexTarget.y - transform.position.y);
                 if (Mathf.Abs(pom.x) > Mathf.Abs(pom.y))
                 {
                     if (Mathf.Abs(pom.x) < 0.1)
@@ -101,11 +108,15 @@ public class LaterenerScript : MonoBehaviour {
                         pom.y /= Mathf.Abs(pom.y);
                         transform.position = transform.position + pom * movment;
                     }
-                }
+                }*/
+            } else
+            {
+                isDoszedl = true;
             }
         }
         else
         {
+            movment += 0.01f;
             latarnie[losed].Zaswiec();
             chooseTarget();
             isDoszedl = false;
