@@ -7,15 +7,14 @@ public class PlayerScript : MonoBehaviour {
     public float maxSpeed;
     public float gamespeed;
     public int lives;
-    public float invincibility;
+    private bool invincibility;
     private float wynik;
     // Use this for initialization
     Rigidbody2D body;
     loadSceneScript loadSceneScript;
     void Start () {
         body = this.GetComponent<Rigidbody2D>();
-        lives = 5;
-        invincibility = 0;
+        invincibility = false;
         loadSceneScript = new loadSceneScript();
         wynik = 2;
     }
@@ -36,19 +35,16 @@ public class PlayerScript : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Pebel>())
-        {
-            if (invincibility <= 0) {
+            if (!invincibility) {
                 lives--;
-                invincibility = 2;
+                invincibility = true;
                 if (lives < 0)
                 {
                     loadSceneScript.LoadSceneChapter3();
                 }
             } else
             {
-                invincibility -= Time.deltaTime;
-            }
-        }
+                invincibility = false ;
+            }       
     }
 }

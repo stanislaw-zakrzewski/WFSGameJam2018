@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   gamespeed: 5
+  lives: 5
 --- !u!212 &212640020255891484
 SpriteRenderer:
   m_ObjectHideFlags: 1

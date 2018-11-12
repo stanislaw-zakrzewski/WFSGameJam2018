@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class loadSceneScript : MonoBehaviour {
+public class loadSceneScript : MonoBehaviour{
 
     bool isPauseLoaded = false;
     HideUI hideUI;

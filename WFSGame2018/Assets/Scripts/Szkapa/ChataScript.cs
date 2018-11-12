@@ -28,7 +28,7 @@ public class ChataScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(player.GetInstanceID());
+        //Debug.Log(player.GetInstanceID());
         dystance = new Vector2(Mathf.Abs(GameObject.Find("player").GetComponent<Rigidbody2D>().position.x - transform.position.x),
                 Mathf.Abs( GameObject.Find("player").GetComponent<Rigidbody2D>().position.y - transform.position.y));
         realdystance = Mathf.Sqrt(Mathf.Pow(dystance.x,2) + Mathf.Pow(dystance.y,2));

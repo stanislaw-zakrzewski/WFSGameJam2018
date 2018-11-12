@@ -9,11 +9,12 @@ public class BGBehavior : MonoBehaviour {
     private bool canICreateNewBoard;
     private Stack<GameObject> stosik;
     private float timer;
+    public int numberOfChatas;
     // Use this for initialization
     void Start () {
         canICreateNewBoard = true;
         stosik = new Stack<GameObject>();
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < numberOfChatas; i++)
         {
             Vector2 pom = new Vector2(Random.Range(-40,40),Random.Range((float)-2.5,(float) 0.5));
             Vector2 pom2 = new Vector2(transform.position.x, transform.position.y);
